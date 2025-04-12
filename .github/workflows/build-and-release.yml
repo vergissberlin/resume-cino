@@ -119,51 +119,12 @@ jobs:
             | PDF | EPUB |
             | --- | ---- |
             | <a href="https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf"><img width="144" src="https://cdn.githubraw.com/${{ github.repository }}/main/Content/Media/Cover/Cover-pdf.png" alt="Cover for pdf" /></a> | <a href="https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub"><img width="144" src="https://cdn.githubraw.com/${{ github.repository }}/main/Content/Media/Cover/Cover-epub.png" alt="Cover for epub" /></a> |
-            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub) |
-            
-            ##### Download single files
-
-            | Document     | Download |
-            | ------------ | -------- |
-            | Introduction | [![Badge CV](https://img.shields.io/badge/DE-Introduction-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}-introduction.pdf) | 
-            | CV           | [![Badge CV](https://img.shields.io/badge/DE-CV-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}-curriculum-vitae.pdf) | 
-            | Portfolio    | [![Badge CV](https://img.shields.io/badge/DE-Portfoilo-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}-portfolio.pdf) |
+            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub) |            
 
           draft: false
           prerelease: false
 
-      - name: Step 4.1 Upload Introduction PDF Release Asset
-        id: upload-release-asset-pdf-introduction
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ env.RESUME_FILENAME }}-introduction/${{ env.RESUME_FILENAME }}-introduction.pdf
-          asset_name: ${{ env.RESUME_FILENAME }}-introduction.pdf
-          asset_content_type: application/pdf
-      - name: Step 3.2 Upload CV PDF Release Asset
-        id: upload-release-asset-pdf-cv
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ env.RESUME_FILENAME }}-curriculum-vitae/${{ env.RESUME_FILENAME }}-curriculum-vitae.pdf
-          asset_name: ${{ env.RESUME_FILENAME }}-curriculum-vitae.pdf
-          asset_content_type: application/pdf
-      - name: Step 4.3 Upload Portfolio PDF Release Asset
-        id: upload-release-asset-pdf-portfolio
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ env.RESUME_FILENAME }}-portfolio/${{ env.RESUME_FILENAME }}-portfolio.pdf
-          asset_name: ${{ env.RESUME_FILENAME }}-portfolio.pdf
-          asset_content_type: application/pdf
-
-      - name: Step 5.1 Upload PDF Release Asset
+      - name: Step 4.1 Upload PDF Release Asset
         id: upload-release-asset-pdf
         uses: actions/upload-release-asset@v1
         env:
@@ -173,7 +134,7 @@ jobs:
           asset_path: ./resume-pdf/resume-${{ env.RESUME_FILENAME }}.pdf
           asset_name: resume-${{ env.RESUME_FILENAME }}.pdf
           asset_content_type: application/pdf
-      - name: Step 5.2 Upload EPUB Release Asset
+      - name: Step 4.2 Upload EPUB Release Asset
         id: upload-release-asset-epub
         uses: actions/upload-release-asset@v1
         env:

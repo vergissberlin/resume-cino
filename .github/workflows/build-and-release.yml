@@ -86,12 +86,12 @@ jobs:
           ls -lisah
 
       - name: Step 2.1 Download pdf artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: resume-pdf
           path: ${{ env.RESUME_FILENAME }}-pdf
       - name: Step 2.2 Download epub artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: resume-epub
           path: ${{ env.RESUME_FILENAME }}-epub

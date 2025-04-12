@@ -158,11 +158,11 @@ docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
   --defaults Template/Config/defaults-pdf.yml \
   --metadata-file Template/Config/metadata-pdf.yml \
   -V title="${RESUME_NAME}" \
-  -V subtitle="Resume" \
+  -V subtitle="Bewerbung" \
   -V subject="${RESUME_SUBJECT}" \
   -V lang="en" \
   -V author="${RESUME_AUTHOR}" \
-  -V description="Resume by ${RESUME_AUTHOR}" \
+  -V description="Bewerbung von ${RESUME_AUTHOR}" \
   -V rights="© ${document_date_year} ${RESUME_NAME}, ${RESUME_LICENSE}" \
   -V date="$document_date" \
   Temp/combined.md;
@@ -174,11 +174,11 @@ docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
   --defaults Template/Config/defaults-epub.yml \
   --metadata-file Template/Config/metadata-epub.yml \
   -V title="${RESUME_NAME}" \
-  -V subtitle="Resume" \
+  -V subtitle="Bewerbung" \
   -V subject="${RESUME_SUBJECT}" \
-  -V author="Author: ${RESUME_AUTHOR}" \
-  -V titlepage-logo="Content/Media/avatar.svg" \
-  -V description="Resume by ${RESUME_AUTHOR}" \
+  -V author="Autor: ${RESUME_AUTHOR}" \
+  -V titlepage-logo="Content/Media/Avatar/andre-lademann-circle.png" \
+  -V description="Bewerbung von ${RESUME_AUTHOR}" \
   -V rights="© ${document_date_year} ${RESUME_NAME}, ${RESUME_LICENSE}" \
   -V ibooks.version="$document_git_tag" \
   -V date="$document_date" \

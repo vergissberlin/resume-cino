@@ -15,8 +15,8 @@ variables:
   titlepage-text-color: '66C3D2'
   titlepage-rule-color: '8ED1FC'
   titlepage-rule-height: 1
-  titlepage-background: 'Content/Media/Cover/paper-body.pdf'
-  page-background: 'Content/Media/Cover/paper-body.pdf'
+  titlepage-background: 'Content/Media/Cover/CINO-Cover.pdf'
+  page-background: 'Content/Media/Cover/CINO-Body.pdf'
   fontsize: 10pt
   logo-width: 64mm
   book: false

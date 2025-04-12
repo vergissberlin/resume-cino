@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Step 1 - Checkout sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Step 2 - Read dotenv vars
         uses: xom9ikk/dotenv@v2
       - name: Step 3 - Create temporary folders
@@ -29,21 +29,21 @@ jobs:
           ls -lisah Results
 
       - name: Step 4.1 - Upload the single PDF Introduction artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-pdf-introduction
           path: Results/${{ env.RESUME_FILENAME }}-introduction.pdf
           if-no-files-found: error
           retention-days: 12
       - name: Step 4.2 - Upload the single PDF CV artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-pdf-curriculum-vitae
           path: Results/${{ env.RESUME_FILENAME }}-curriculum-vitae.pdf
           if-no-files-found: error
           retention-days: 12
       - name: Step 4.3 - Upload the single PDF Portfolio artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-pdf-portfolio
           path: Results/${{ env.RESUME_FILENAME }}-portfolio.pdf
@@ -51,14 +51,14 @@ jobs:
           retention-days: 12
 
       - name: Step 5.1 - Upload the PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
           path: Results/resume-${{ env.RESUME_FILENAME }}.pdf
           if-no-files-found: error
           retention-days: 12
       - name: Step 5.2 - Upload the EPUB artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-epub
           path: Results/resume-${{ env.RESUME_FILENAME }}.epub
@@ -72,7 +72,7 @@ jobs:
       - build
     steps:
       - name: Step 1.1 - Checkout sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Step 1.2 - Read dotenv vars
         uses: xom9ikk/dotenv@v2
 

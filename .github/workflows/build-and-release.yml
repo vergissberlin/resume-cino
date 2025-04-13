@@ -13,5 +13,3 @@ jobs:
       filename: cino-andrelademann
       formats: '["pdf", "epub"]'
       tag_name: ${{ github.ref_name }}
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

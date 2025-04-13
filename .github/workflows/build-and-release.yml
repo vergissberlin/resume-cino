@@ -13,58 +13,56 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        format: [pdf, epub]  # beliebig erweiterbar: [pdf, epub, html, docx, ...]
     steps:
-      - name: Step 1 - Checkout sources
+      - name: Checkout sources
         uses: actions/checkout@v4
-      - name: Step 2 - Read dotenv vars
+
+      - name: Read dotenv vars
         uses: xom9ikk/dotenv@v2
-      - name: Step 3 - Create temporary folders
+
+      - name: Create folders
         run: |
           mkdir -p Results
           mkdir -p Temp
-      - name: Step 4 - Generate the documents using Docker
-        run: |
-          ./Scripts/build.sh
-          ls -lisah Results
 
-      - name: Step 5.1 - Upload the PDF artifact
+      - name: Build resume in ${{ matrix.format }} format using Docker
+        run: |
+          ./Scripts/build.sh ${{ matrix.format }}
+
+      - name: Upload artifact ${{ matrix.format }}
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: Results/${{ env.RESUME_FILENAME }}.pdf
-          if-no-files-found: error
-          retention-days: 12
-      - name: Step 5.2 - Upload the EPUB artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-epub
-          path: Results/${{ env.RESUME_FILENAME }}.epub
+          name: resume-${{ matrix.format }}
+          path: Results/${{ env.RESUME_FILENAME }}.${{ matrix.format }}
           if-no-files-found: error
           retention-days: 12
 
   release:
-    name: release – ${{ github.ref_name }}
     runs-on: ubuntu-latest
-    needs:
-      - build
+    needs: build
     steps:
-      - name: Step 1.1 - Checkout sources
+      - name: Checkout sources
         uses: actions/checkout@v4
-      - name: Step 1.2 - Read dotenv vars
+
+      - name: Read dotenv vars
         uses: xom9ikk/dotenv@v2
 
-      - name: Step 2.1 Download pdf artifact
+      - name: Download PDF artifact
         uses: actions/download-artifact@v4
         with:
           name: resume-pdf
           path: Results
-      - name: Step 2.2 Download epub artifact
+
+      - name: Download EPUB artifact
         uses: actions/download-artifact@v4
         with:
           name: resume-epub
           path: Results
 
-      - name: Step 3. Create Release
+      - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -87,11 +85,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Check if files exist
-        run: |
-          ls -lisah Results
-      - name: Step 4.1 Upload PDF Release Asset
-        id: upload-release-asset-pdf
+      - name: Upload PDF Release Asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -100,8 +94,8 @@ jobs:
           asset_path: ./Results/${{ env.RESUME_FILENAME }}.pdf
           asset_name: ${{ env.RESUME_FILENAME }}.pdf
           asset_content_type: application/pdf
-      - name: Step 4.2 Upload EPUB Release Asset
-        id: upload-release-asset-epub
+
+      - name: Upload EPUB Release Asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -109,4 +103,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./Results/${{ env.RESUME_FILENAME }}.epub
           asset_name: ${{ env.RESUME_FILENAME }}.epub
-          asset_content_type: application/epub
+          asset_content_type: application/epub+zip

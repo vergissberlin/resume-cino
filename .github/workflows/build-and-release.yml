@@ -11,5 +11,5 @@ jobs:
     uses: vergissberlin/resume-builder/.github/workflows/build-resume.yml@main
     with:
       filename: cino-andrelademann
-      formats: '["pdf", "epub"]'
+      formats: '["pdf", "epub", "docx"]'
       tag_name: ${{ github.ref_name }}

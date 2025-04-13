@@ -17,5 +17,5 @@ rights: © 2022 André Lademann, CC BY-NC
 ibooks:
   version: 1.0.0
   ipad-orientation-lock: portrait-only
-  specified-fonts: true|
-cover-image: Content/Media/Cover/CINO-Cover-Epub
+  specified-fonts: true
+cover-image: Content/Media/Cover/CINO-Cover-Epub.png

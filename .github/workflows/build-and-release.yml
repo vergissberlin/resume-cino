@@ -6,6 +6,10 @@ on:
       - '*'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   call-builder:
     uses: vergissberlin/resume-builder/.github/workflows/build-resume.yml@main

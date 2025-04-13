@@ -1,6 +1,6 @@
 # Stellenbeschreibung 
 
-_Chief of Innovation and Network Officer  (CINO)_ 
+## Chief of Innovation and Network Officer (CINO) 
 
 > Ich gestalte Innovation. Ich baue Netzwerke. Ich bringe Zukunft ins Unternehmen.
 
@@ -15,7 +15,7 @@ Möglichmacher und Brückenbauer zwischen Technologie, Menschen und Märkten.
 
 ### Innovation vorantreiben
 
-Ich entwickle innovative Strategien, die unser Unternehmen nachhaltig prägen. 
+Ich entwickle innovative Strategien, die Thinkport nachhaltig prägen. 
 Dabei beobachte ich relevante Trends und Technologien, übersetze sie in greifbare 
 Chancen und setze sie in marktfähige Produkte, Services oder Prozesse um. 
 Ich schaffe Räume für Kreativität – durch interne Innovationsformate, 
@@ -39,10 +39,12 @@ geprägt von Vertrauen, Lernen und Verantwortung.
 
 ## Was mich auszeichnet
 
-- Ich bringe mehrjährige Erfahrung im Innovationsmanagement, in der digitalen Transformation oder im Aufbau neuer Geschäftsfelder mit.
+- Als Mitbegründer der Gilden und RFCs habe ich das Innovationsmanagement bei Thinkport 
+  maßgeblich geprägt. 
 - Ich denke unternehmerisch, arbeite strukturiert und kommuniziere überzeugend – intern wie extern.
 - Ich liebe es, Netzwerke zu pflegen, Trends zu analysieren und neue Dinge einfach mal auszuprobieren.
 - Ich kann Menschen begeistern, Perspektiven zusammenbringen und Ideen Realität werden lassen.
+- Ich bringe mehrjährige Erfahrung im Innovationsmanagement, in der digitalen Transformation oder im Aufbau neuer Geschäftsfelder mit.
 
 ⸻
 

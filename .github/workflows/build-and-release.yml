@@ -1,8 +1,4 @@
-name: Build resume and publish it on GitHub releases
-
-permissions:
-  contents: write
-  packages: write
+name: Deploy Resume CINO
 
 on:
   push:
@@ -11,96 +7,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        format: [pdf, epub]  # beliebig erweiterbar: [pdf, epub, html, docx, ...]
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@v4
-
-      - name: Read dotenv vars
-        uses: xom9ikk/dotenv@v2
-
-      - name: Create folders
-        run: |
-          mkdir -p Results
-          mkdir -p Temp
-
-      - name: Build resume in ${{ matrix.format }} format using Docker
-        run: |
-          ./Scripts/build.sh ${{ matrix.format }}
-
-      - name: Upload artifact ${{ matrix.format }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume-${{ matrix.format }}
-          path: Results/${{ env.RESUME_FILENAME }}.${{ matrix.format }}
-          if-no-files-found: error
-          retention-days: 12
-
-  release:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@v4
-
-      - name: Read dotenv vars
-        uses: xom9ikk/dotenv@v2
-
-      - name: Download PDF artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: resume-pdf
-          path: Results
-
-      - name: Download EPUB artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: resume-epub
-          path: Results
-
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            #### Changes in this Release
-
-            - ${{ github.event.head_commit.message }}
-
-            #### Download
-
-            | PDF | EPUB |
-            | --- | ---- |
-            | <a href="https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf"><img width="144" src="https://cdn.githubraw.com/${{ github.repository }}/main/Content/Media/Cover/Cover-pdf.png" alt="Cover for pdf" /></a> | <a href="https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub"><img width="144" src="https://cdn.githubraw.com/${{ github.repository }}/main/Content/Media/Cover/Cover-epub.png" alt="Cover for epub" /></a> |
-            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub) |            
-
-          draft: false
-          prerelease: false
-
-      - name: Upload PDF Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Results/${{ env.RESUME_FILENAME }}.pdf
-          asset_name: ${{ env.RESUME_FILENAME }}.pdf
-          asset_content_type: application/pdf
-
-      - name: Upload EPUB Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Results/${{ env.RESUME_FILENAME }}.epub
-          asset_name: ${{ env.RESUME_FILENAME }}.epub
-          asset_content_type: application/epub+zip
+  call-builder:
+    uses: vergissberlin/resume-builder/.github/workflows/build-resume.yml@main
+    with:
+      filename: ${{ env.RESUME_FILENAME }}
+      formats: '["pdf", "epub"]'
+      tag_name: ${{ github.ref_name }}
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

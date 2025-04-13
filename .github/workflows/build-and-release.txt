@@ -1,15 +1,14 @@
 name: Build resume and publish it on GitHub releases
 
+permissions:
+  contents: write
+  packages: write
+
 on:
   push:
     tags:
       - '*'
   workflow_dispatch:
-
-permissions:
-  contents: write
-  pages: write
-  packages: write
 
 jobs:
   build:
@@ -23,12 +22,11 @@ jobs:
         run: |
           mkdir -p Results
           mkdir -p Temp
-      - name: Step 3 - Generate the documents using Docker
+      - name: Step 4 - Generate the documents using Docker
         run: |
           ./Scripts/build.sh
           ls -lisah Results
-
-      - name: Step 4.1 - Upload the single PDF Introduction artifact
+      - name: Step 5 - Upload the single PDF Introduction artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf-introduction
@@ -54,14 +52,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
-          path: Results/resume-${{ env.RESUME_FILENAME }}.pdf
+          path: Results/${{ env.RESUME_FILENAME }}.pdf
           if-no-files-found: error
           retention-days: 12
       - name: Step 5.2 - Upload the EPUB artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume-epub
-          path: Results/resume-${{ env.RESUME_FILENAME }}.epub
+          path: Results/${{ env.RESUME_FILENAME }}.epub
           if-no-files-found: error
           retention-days: 12
 

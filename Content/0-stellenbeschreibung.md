@@ -2,7 +2,7 @@
 
 > [Introduction](./0-introduction.md) | [CV](./1-curriculum-vitae.md) | [Portfolio](./2-portfolio.md) | [Contact](3-contact.md)
 
-![REPLACE_NAME](Media/Avatar/andre-lademann.png){width: "42%"}
+![REPLACE_NAME](Media/Avatar/andre-lademann.png)
 
 
 ## Über mich

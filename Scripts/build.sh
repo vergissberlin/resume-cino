@@ -141,7 +141,7 @@ docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
   --defaults Template/Config/defaults-epub.yml \
   --metadata-file Template/Config/metadata-epub.yml \
   -V title="${RESUME_NAME}" \
-  -V subtitle="Bewerbung" \
+  -V subtitle="Chief Of Innovation" \
   -V subject="${RESUME_SUBJECT}" \
   -V author="Autor: ${RESUME_AUTHOR}" \
   -V titlepage-logo="Content/Media/Avatar/andre-lademann-circle.png" \

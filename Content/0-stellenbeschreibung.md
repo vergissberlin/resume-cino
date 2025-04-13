@@ -1,9 +1,8 @@
-# Innovation beginnt mit Ideen
+# Stellenbeschreibung _Chief Of Innovation_ 
 
-> [Introduction](./0-introduction.md) | [CV](./1-curriculum-vitae.md) | [Portfolio](./2-portfolio.md) | [Contact](3-contact.md)
+_Innovation beginnt mit Ideen_
 
 ![REPLACE_NAME](Media/Avatar/andre-lademann.png)
-
 
 ## Über mich
 
@@ -69,7 +68,7 @@ mich zusätzlich auf Observability spezialisiert.
 - Content-Produktion
 - Automatisierung
 
-> **Mehr davon?** In meinem [CV](./1-curriculum-vitae.md) und
+> **Mehr davon?** In meinem [CV](./2-curriculum-vitae) und
 > [Portfolio](./2-portfolio.md) gehe ich auf weitere Details ein.
 
 [meetup-lorawan]: https://www.meetup.com/de-DE/lorawan-leipzig-usergroup
@@ -131,4 +130,4 @@ JavaScript, Load testing, Usability, Accessibility, VueJS, Docker, Node JS, Perf
 Semantic Web, RDF
 
 > **⚠️ Please note** that this is not a complete list of all my skills.
-> Take a look at my [CV](./1-curriculum-vitae.md) and [portfolio](./2-portfolio.md) for more information.
+> Take a look at my [CV](./2-curriculum-vitae) and [portfolio](./2-portfolio.md) for more information.

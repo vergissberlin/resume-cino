@@ -1,7 +1,5 @@
 # Portfolio
 
-> [Introduction](./0-introduction.md) | [CV](./1-curriculum-vitae.md) | [Portfolio](./2-portfolio.md) | [Contact](3-contact.md)
-
 ## Table of projects
 
 * [x] [Example 1](#-example-1) Example 1

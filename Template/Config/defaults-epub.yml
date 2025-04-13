@@ -8,7 +8,8 @@ variables:
   toc-own-page: true
   footnotes-pretty: true
   table-use-row-colors: true
-  table-row-color: "22FFFF"
+  table-row-color: "333333"
   table-row-height: 142pt
-  table-column-color: "22FF33"
+  table-column-color: "333333"
+  titlepage-background: 'Content/Media/Cover/CINO-Cover.pdf'
 

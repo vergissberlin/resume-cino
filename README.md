@@ -5,4 +5,7 @@
 [![Resume - Download](https://img.shields.io/badge/CV-Download-2ea44f?style=for-the-badge)](https://github.com/vergissberlin/resume-cino/releases)
 
 - Stellenbeschreibung: Chief of Innovation
-- Bewerbungsunterlagen: Lebenslauf, Bewerbungsschreiben, Portfolio
+- Bewerbungsunterlagen: 
+  - Bewerbungsschreiben
+  - Lebenslauf
+  - Portfolio

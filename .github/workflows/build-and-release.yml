@@ -10,7 +10,7 @@ jobs:
   call-builder:
     uses: vergissberlin/resume-builder/.github/workflows/build-resume.yml@main
     with:
-      filename: ${{ env.RESUME_FILENAME }}
+      filename: cino-andrelademann
       formats: '["pdf", "epub"]'
       tag_name: ${{ github.ref_name }}
     secrets:

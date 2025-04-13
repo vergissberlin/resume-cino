@@ -110,7 +110,7 @@ rm -rf "Temp/*.md*"
 echo "👉\tCombine all Markdown files into a single Markdown file with empty lines"
 for file in Content/*.md; do
   cat "$file" >> Temp/combined.md
-  echo "\n" >> Temp/combined.md
+  echo "\n\newpage" >> Temp/combined.md
 done
 
 # Filter and replace characters in the single Markdown file

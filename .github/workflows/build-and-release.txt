@@ -1,0 +1,141 @@
+name: Build resume and publish it on GitHub releases
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Checkout sources
+        uses: actions/checkout@v4
+      - name: Step 2 - Read dotenv vars
+        uses: xom9ikk/dotenv@v2
+      - name: Step 3 - Create temporary folders
+        run: |
+          mkdir -p Results
+          mkdir -p Temp
+      - name: Step 3 - Generate the documents using Docker
+        run: |
+          ./Scripts/build.sh
+          ls -lisah Results
+
+      - name: Step 4.1 - Upload the single PDF Introduction artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf-introduction
+          path: Results/${{ env.RESUME_FILENAME }}-introduction.pdf
+          if-no-files-found: error
+          retention-days: 12
+      - name: Step 4.2 - Upload the single PDF CV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf-curriculum-vitae
+          path: Results/${{ env.RESUME_FILENAME }}-curriculum-vitae.pdf
+          if-no-files-found: error
+          retention-days: 12
+      - name: Step 4.3 - Upload the single PDF Portfolio artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf-portfolio
+          path: Results/${{ env.RESUME_FILENAME }}-portfolio.pdf
+          if-no-files-found: error
+          retention-days: 12
+
+      - name: Step 5.1 - Upload the PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: Results/resume-${{ env.RESUME_FILENAME }}.pdf
+          if-no-files-found: error
+          retention-days: 12
+      - name: Step 5.2 - Upload the EPUB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-epub
+          path: Results/resume-${{ env.RESUME_FILENAME }}.epub
+          if-no-files-found: error
+          retention-days: 12
+
+  release:
+    name: release – ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Step 1.1 - Checkout sources
+        uses: actions/checkout@v4
+      - name: Step 1.2 - Read dotenv vars
+        uses: xom9ikk/dotenv@v2
+      - name: Step 1.3 - Debug
+        run: |
+          echo "RESUME_FILENAME=${{ env.RESUME_FILENAME }}"
+          echo "GITHUB_REF=${{ github.ref }}"
+          echo "GITHUB_REF_NAME=${{ github.ref_name }}"
+          echo "GITHUB_REPOSITORY=${{ github.repository }}"
+          echo "GITHUB_RUN_ID=${{ github.run_id }}"
+          echo "GITHUB_RUN_NUMBER=${{ github.run_number }}"
+          ls -lisah
+
+      - name: Step 2.1 Download pdf artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-pdf
+          path: ${{ env.RESUME_FILENAME }}-pdf
+      - name: Step 2.2 Download epub artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: resume-epub
+          path: ${{ env.RESUME_FILENAME }}-epub
+
+      - name: Step 3. Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            #### Changes in this Release
+
+            - ${{ github.event.head_commit.message }}
+
+            #### Download
+
+            | PDF | EPUB |
+            | --- | ---- |
+            | <a href="https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf"><img width="144" src="https://cdn.githubraw.com/${{ github.repository }}/main/Content/Media/Cover/Cover-pdf.png" alt="Cover for pdf" /></a> | <a href="https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub"><img width="144" src="https://cdn.githubraw.com/${{ github.repository }}/main/Content/Media/Cover/Cover-epub.png" alt="Cover for epub" /></a> |
+            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub) |            
+
+          draft: false
+          prerelease: false
+
+      - name: Step 4.1 Upload PDF Release Asset
+        id: upload-release-asset-pdf
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./resume-pdf/resume-${{ env.RESUME_FILENAME }}.pdf
+          asset_name: resume-${{ env.RESUME_FILENAME }}.pdf
+          asset_content_type: application/pdf
+      - name: Step 4.2 Upload EPUB Release Asset
+        id: upload-release-asset-epub
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./resume-epub/resume-${{ env.RESUME_FILENAME }}.epub
+          asset_name: resume-${{ env.RESUME_FILENAME }}.epub
+          asset_content_type: application/epub

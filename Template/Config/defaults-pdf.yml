@@ -24,9 +24,9 @@ variables:
   toc-depth: 2
   footnotes-pretty: true
   table-use-row-colors: true
-  table-row-color: '22FFFF'
+  table-row-color: '444444'
   table-row-height: 142pt
-  table-column-color: '22FF33'
+  table-column-color: '444444'
   header-includes:
     - \hypersetup{
       colorlinks=true,
@@ -35,6 +35,6 @@ variables:
       linkbordercolor=red,
       linkcolor=cyan,
       citecolor=gray,
-      filecolor=pink,
+      filecolor=cyan,
       urlcolor=cyan,
       pagebackref=true}

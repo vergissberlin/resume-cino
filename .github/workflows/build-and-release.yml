@@ -97,7 +97,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Results/
+          asset_path: ./Results/${{ env.RESUME_FILENAME }}.pdf
           asset_name: ${{ env.RESUME_FILENAME }}.pdf
           asset_content_type: application/pdf
       - name: Step 4.2 Upload EPUB Release Asset
@@ -107,6 +107,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./Results/
+          asset_path: ./Results/${{ env.RESUME_FILENAME }}.epub
           asset_name: ${{ env.RESUME_FILENAME }}.epub
           asset_content_type: application/epub

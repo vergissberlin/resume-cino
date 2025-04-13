@@ -1,135 +1,53 @@
 # Stellenbeschreibung 
 
-_Chief of Innovation and Network Officer_ 
+_Chief of Innovation and Network Officer  (CINO)_ 
 
-> "Innovation beginnt mit Ideen"
+> Ich gestalte Innovation. Ich baue Netzwerke. Ich bringe Zukunft ins Unternehmen.
 
-![REPLACE_NAME](Media/Avatar/andre-lademann.png)
+In meiner Rolle als Chief of Innovation and Network Officer verantworte ich die 
+strategische Entwicklung und Umsetzung von Innovationen und fördere aktiv den 
+Aufbau eines starken, zukunftsorientierten Partnernetzwerks. Ich bin Impulsgeber, 
+Möglichmacher und Brückenbauer zwischen Technologie, Menschen und Märkten.
 
-## Über mich
+⸻
 
-Ich bin leidenschaftlicher **Software-Engineer** und **Cloud-Engineer** mit
-einer Passion für Observability. In meiner Freizeit experimentiere ich mit
-**Mikrokontrollern** und **Autonomes Fahren** von Fahrzeugen. In
-[Meetups][meetup-lorawan], Schulungen und Workshops teile ich meine
-Erfahrungen mit Anderen und helfe ihnen, ihre eigenen Projekte zu
-realisieren. **Es ist die Faszination für Software und Hardware, die mich
-immer wieder dazu bringt, mich in neue Technologien einzuarbeiten und mich
-mit anderen Menschen auszutauschen!** In meiner beruflichen Laufbahn hatte
-ich die Möglichkeit, mit internationalen Teams zu arbeiten und Projekte in
-verschiedenen Ländern zu realisieren. Im Bereich Marketing unterstütze ich
-dabei, Prozesse zu automatisieren und die Effizienz zu steigern und
-produziere auch selbst Inhalte in Bild, Text und Ton.
+## Was ich tue
 
-**Meine Fähigkeiten sind:**
-1. Software-Entwicklung
-2. Cloud Engineering
-3. Software-Architektur
-4. Consulting, Trainer, Speaker
-5. Marketing, SEO, Content-Produktion
+### Innovation vorantreiben
 
+Ich entwickle innovative Strategien, die unser Unternehmen nachhaltig prägen. 
+Dabei beobachte ich relevante Trends und Technologien, übersetze sie in greifbare 
+Chancen und setze sie in marktfähige Produkte, Services oder Prozesse um. 
+Ich schaffe Räume für Kreativität – durch interne Innovationsformate, 
+agile Methoden und interdisziplinäre Teams.
 
-## Aufgabenschwerpunkte im Verlaufe der Zeit
+### Netzwerke aufbauen und nutzen
 
-Im Verlaufe der Zeit haben sich meine Themenschwerpunkte des Öfteren verlagert.
-Die folgende Grafik visualisiert dies sehr gut. 2023 geb es einen starken
-Fokus auf Software-Entwicklung und Cloud-Engineering. Im Jahr 2024 habe ich
-mich zusätzlich auf Observability spezialisiert.
+Ich knüpfe und pflege Beziehungen zu Start-ups, Hochschulen, Innovationsclustern 
+und strategischen Partnern. Ich repräsentiere das Unternehmen auf Konferenzen, 
+Messen und Events – immer auf der Suche nach Impulsen, Kooperationen und 
+gemeinsamen Zukunftsprojekten.
 
-![Fokus-Schwerkunkte im Laufe der Zeit](Media/knowledge-focus-timeline.svg "Knowledge focus timeline"){ width=100% }
+### Zusammenarbeit ermöglichen
 
+Ich arbeite eng mit Führungskräften und Teams aus allen Bereichen zusammen. Ich 
+verstehe mich als Schnittstelle zwischen Strategie und Umsetzung. Durch offene 
+Kommunikation und mutige Experimente fördere ich eine Kultur der Innovation – 
+geprägt von Vertrauen, Lernen und Verantwortung.
 
+⸻
 
-## Skills
+## Was mich auszeichnet
 
-### CINO SCHWERPUNKTE
+- Ich bringe mehrjährige Erfahrung im Innovationsmanagement, in der digitalen Transformation oder im Aufbau neuer Geschäftsfelder mit.
+- Ich denke unternehmerisch, arbeite strukturiert und kommuniziere überzeugend – intern wie extern.
+- Ich liebe es, Netzwerke zu pflegen, Trends zu analysieren und neue Dinge einfach mal auszuprobieren.
+- Ich kann Menschen begeistern, Perspektiven zusammenbringen und Ideen Realität werden lassen.
 
-- PoC
-- Projektmanagement
-- Erfahrung mit Produktentwicklung
-- Erfahrung mit internationalen Teams und Projekten
-- Marketingautomatisierung
-- Content-Produktion
+⸻
 
+## Wofür ich stehe
 
-### Consulting
-
-- Project management
-- Requirement engineering
-- Software architecture
-
-### Trainer & Speaker
-
-- Software development
-- DevOps
-
-### Marketing
-
-- SEO
-- Analytics, BI
-- Content-Produktion
-- Automatisierung
-
-> **Mehr davon?** In meinem [CV](./2-curriculum-vitae) und
-> [Portfolio](./2-portfolio.md) gehe ich auf weitere Details ein.
-
-[meetup-lorawan]: https://www.meetup.com/de-DE/lorawan-leipzig-usergroup
-
-
----
-
-
-
-
-
-## About me
-
-I am a software developer with a passion for web development. I am currently working as a freelance developer and consultant. 
-I am also a member of the [Open Source Initiative](https://opensource.org/).
-My main focus is on the development of web applications and the integration of web technologies into existing systems.
-I am also interested in the development of mobile applications and the integration of web technologies into existing systems.
-I am also interested in the development of mobile applications and the integration of web technologies into existing systems.
-
-## Skills
-
-### Software development
-
-- Web development
-- Web design
-- Web accessibility
-- Web performance
-- Web security
-
-### Consulting
-
-- Web development
-- Web design
-- Web accessibility
-
-## Experience
-
-### Freelance developer and consultant
-
-- 2019 - Present
-- [example.de](https://example.de)
-- [GitHub](https://github.com/example)
-
-### Web developer
-
-- 2018 - 2019
-- [example.com](https://example.com)
-- [GitHub](https://github.com/example/example)
-
-## Main skills
-
-- Web development
-- Web design
-- Web accessibility
-
-## Buzzword bingo
-
-JavaScript, Load testing, Usability, Accessibility, VueJS, Docker, Node JS, Performance, ESI, Varnish reverse proxy, Extbase, Deployment, Google Chrome Extensions, Regressive testing, functional testing, acceptance testing, unit testing, bdd, Codeception, PWA, Ionic Framework, jQuery, jQueryUI, git, Continuous Integration, Concourse CI, socket.io, Firebase, TYPO3 CMS, Lighttpd, Nginx, Code Review, PHP, Internet of Things, Raspberry PI, NAS, Zanox,
-Semantic Web, RDF
-
-> **⚠️ Please note** that this is not a complete list of all my skills.
-> Take a look at my [CV](./2-curriculum-vitae) and [portfolio](./2-portfolio.md) for more information.
+1. Ich glaube daran, dass Innovation kein Zufall ist – sondern das Ergebnis von Neugier, Offenheit und Zusammenarbeit.
+2. Ich bringe Struktur ins Neue, ohne es zu ersticken.
+3. Ich vernetze Menschen, Ideen und Technologien zu etwas Größerem.

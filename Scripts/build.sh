@@ -121,7 +121,7 @@ sh Scripts/replace.sh Temp/combined.md
 # Generate a single PDF file from all Markdown files in the content directory
 echo "👉\tGenerate PDF for all files"
 docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
-  -o Results/resume-${RESUME_FILENAME}.pdf \
+  -o Results/${RESUME_FILENAME}.pdf \
   --defaults Template/Config/defaults-pdf.yml \
   --metadata-file Template/Config/metadata-pdf.yml \
   -V title="${RESUME_NAME}" \
@@ -137,7 +137,7 @@ docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
 # Generate a singe epub file from all Markdown files in the content directory
 echo "👉\tGenerate EPUB for all files"
 docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
-  -o Results/resume-${RESUME_FILENAME}.epub \
+  -o Results/${RESUME_FILENAME}.epub \
   --defaults Template/Config/defaults-epub.yml \
   --metadata-file Template/Config/metadata-epub.yml \
   -V title="${RESUME_NAME}" \

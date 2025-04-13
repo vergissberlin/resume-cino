@@ -57,12 +57,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: resume-pdf
-          path: Results/${{ env.RESUME_FILENAME }}.pdf
+          path: Results
       - name: Step 2.2 Download epub artifact
         uses: actions/download-artifact@v4
         with:
           name: resume-epub
-          path: Results/${{ env.RESUME_FILENAME }}.epub
+          path: Results
 
       - name: Step 3. Create Release
         id: create_release

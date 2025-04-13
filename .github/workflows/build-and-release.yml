@@ -70,6 +70,8 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
           body: |
             #### Changes in this Release
 
@@ -79,10 +81,7 @@ jobs:
 
             | PDF | EPUB |
             | --- | ---- |
-            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/resume-${{ env.RESUME_FILENAME }}.epub) |
-
-          draft: false
-          prerelease: false
+            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}.epub) |
 
       - name: Upload PDF Release Asset
         uses: actions/upload-release-asset@v1

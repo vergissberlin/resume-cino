@@ -19,25 +19,9 @@ fi
 ## Replacers
 ################################################################################
 
-
-# Remove header navigation
-$sedcmd 's/>\ \[Introduction\].*//g' $1
-
-# Remove name from title
-$sedcmd 's/–\ \André\ Lademann//g' $1
-
-# Remove badges
-$sedcmd '/\[\!\[PDF\ Download/d' $1
-
 # Remove download link
 $sedcmd 's/## Download//g' $1
 $sedcmd 's/\-\ \Lebenslauf\ \[PDF\ CV//g' $1
-
-# Remove top links from headers
-$sedcmd 's/\[\[↑\]\(\#.*\)\]\ //g' $1
-
-# Remove top links from headers
-$sedcmd 's/\#\-/#/g' $1
 
 # Remove crosses from headers
 $sedcmd 's/\[x\]\ //g' $1

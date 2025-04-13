@@ -106,9 +106,12 @@ echo "\n✅\tGenerate PDF with combined content"
 # Remove the temporary directory containing the Markdown files
 rm -rf "Temp/*.md*"
 
-# Combine all Markdown files in the content directory into a single Markdown file
-echo "👉\tCombine all Markdown files into a single Markdown file"
-cat Content/*.md > Temp/combined.md
+# Combine all Markdown files in the content directory into a single Markdown file with empty lines between contents
+echo "👉\tCombine all Markdown files into a single Markdown file with empty lines"
+for file in Content/*.md; do
+  cat "$file" >> Temp/combined.md
+  echo "\n" >> Temp/combined.md
+done
 
 # Filter and replace characters in the single Markdown file
 echo "👉\tFilter and replace characters in single Markdown file"

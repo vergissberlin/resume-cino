@@ -96,6 +96,11 @@ jobs:
           draft: false
           prerelease: false
 
+      - name: Check if files exist
+        run: |
+          ls -lisah
+          ls -lisah ./resume-pdf
+            ls -lisah ./resume-epub
       - name: Step 4.1 Upload PDF Release Asset
         id: upload-release-asset-pdf
         uses: actions/upload-release-asset@v1

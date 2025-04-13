@@ -124,10 +124,10 @@ docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
   -o Results/${RESUME_FILENAME}.pdf \
   --defaults Template/Config/defaults-pdf.yml \
   --metadata-file Template/Config/metadata-pdf.yml \
-  -V title="${RESUME_NAME}" \
-  -V subtitle="Bewerbung" \
+  -V title="${RESUME_TITLE}" \
+  -V subtitle="${RESUME_SUBTITLE}" \
   -V subject="${RESUME_SUBJECT}" \
-  -V lang="en" \
+  -V lang="${RESUME_LANGUAGE}" \
   -V author="${RESUME_AUTHOR}" \
   -V description="Bewerbung von ${RESUME_AUTHOR}" \
   -V rights="© ${document_date_year} ${RESUME_NAME}, ${RESUME_LICENSE}" \
@@ -140,8 +140,9 @@ docker run -i -v $PWD:/data ghcr.io/vergissberlin/pandoc-eisvogel-de \
   -o Results/${RESUME_FILENAME}.epub \
   --defaults Template/Config/defaults-epub.yml \
   --metadata-file Template/Config/metadata-epub.yml \
-  -V title="${RESUME_NAME}" \
-  -V subtitle="Chief Of Innovation" \
+  -V lang="${RESUME_LANGUAGE}" \
+  -V title="${RESUME_TITLE}" \
+  -V subtitle="${RESUME_SUBTITLE}" \
   -V subject="${RESUME_SUBJECT}" \
   -V author="Autor: ${RESUME_AUTHOR}" \
   -V titlepage-logo="Content/Media/Avatar/andre-lademann-circle.png" \

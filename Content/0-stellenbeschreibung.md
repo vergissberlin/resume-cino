@@ -1,6 +1,8 @@
-# Stellenbeschreibung _Chief Of Innovation_ 
+# Stellenbeschreibung 
 
-_Innovation beginnt mit Ideen_
+_Chief of Innovation and Network Officer_ 
+
+> "Innovation beginnt mit Ideen"
 
 ![REPLACE_NAME](Media/Avatar/andre-lademann.png)
 

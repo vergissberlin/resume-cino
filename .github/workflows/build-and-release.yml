@@ -98,9 +98,7 @@ jobs:
 
       - name: Check if files exist
         run: |
-          ls -lisah
-          ls -lisah ./resume-pdf
-            ls -lisah ./resume-epub
+          ls -lisah Results
       - name: Step 4.1 Upload PDF Release Asset
         id: upload-release-asset-pdf
         uses: actions/upload-release-asset@v1
@@ -108,7 +106,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./resume-pdf/${{ env.RESUME_FILENAME }}.pdf
+          asset_path: ./Results/${{ env.RESUME_FILENAME }}.pdf
           asset_name: resume-${{ env.RESUME_FILENAME }}.pdf
           asset_content_type: application/pdf
       - name: Step 4.2 Upload EPUB Release Asset
@@ -118,6 +116,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./resume-epub/${{ env.RESUME_FILENAME }}.epub
+          asset_path: ./Results/${{ env.RESUME_FILENAME }}.epub
           asset_name: resume-${{ env.RESUME_FILENAME }}.epub
           asset_content_type: application/epub

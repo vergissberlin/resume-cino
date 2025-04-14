@@ -1,80 +1,34 @@
-
 # Portfolio
 
 ## Projektübersicht
 
-- **POS & Observabilty**
-    - [EDEKA - Observability PoC](#-EDEKA-Observability-PoC)
+- **POS & Observability**
+    - [EDEKA - Observability PoC](#-edeka-obbservability-Poc)
       Integration der Gebit Kassenlösung für Edeka
-    - [EDEKA - Kassensoftware Integration](#-EDEKA-POS-Integration)
+    - [EDEKA - Kassensoftware Integration](#-edeka-pos-integration)
       Integration der Gebit Kassenlösung für Edeka
 
 - **IoT**
-    - [CoffeeBin](#-CoffeeBin) Datenvisualisierung und Analytics
+    - [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics
     - [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel
 
 - **App development**
     - [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
     - [Tap!Tap!](#-tap-tap) App development
-    - [CamFight](#-CamFight) Mobile Web App
 
 - **Web development**
     - [AIDA board portal](#-AIDA-board-portal) Gästeportal für AIDA Cruises
-    - [dynamo-dresden.de](#-dynamo-dresdende) High Performance Web Application
-    - [Blugento](#-blugento) Docker, Marketing Automation, AWS
+    - [Blugento](#-produktentwicklung-blugento) Docker, Marketing Automation,
+      AWS
 
-- **Desktop** (PWA)
-    - [KiTa Tagesplaner](#-KiTa-Tagesplaner) PWA App
-
-- **CICD**
-    - [Universal Mucis - Shop-Manager](#-universal-music--shop-manager) Schulungen, Docker, CICD, Cloud (AWS, Azure)
+- **CI CD**
+    - [Universal Music - Shop-Manager](#-universal-music--shop-manager) 
+      Schulungen, Docker, CI CD, Cloud (AWS, Azure)
     - [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
-
-- **[Weitere Projekte](#-Weitere-Projekte)**
-    - [Bashlight](#-Bashlight) Commandline enhancer
 
 ---
 
 ## Consulting
-
-
-### [[↑](#projektübersicht)] KiTa Tagesplaner
-
-_2020 - 2021_
-
-![KiTa Tagesplaner](Media/Portfolio/kita-tagesplaner.png)
-
-Erzieherinnen und Erziehern soll ein Werkzeug an die Hand gegeben werden, um
-den Tagesablauf in der Kita mit Bildern zu beschreiben. Die Bilder können per
-Drag-and-Drop ausgewählt und sortiert werden. Zusätzliche Textfelder können
-eingefügt werden.
-
-Die **Technologie-Highlights** sind *Vue.js* im Frontend mit *jspdf* für die
-Erstellung von PDFs. Es handelt sich um eine einseitige Anwendung, die ohne
-Internetverbindung genutzt werden kann und auf Desktop-Geräten installierbar
-ist. Die Anwendung erkennt den bevorzugten Lichtmodus des Systems und ändert
-das Styling in den *Dunkelmodus*, wenn dieser aktiviert ist. Sie verwendet
-benutzerdefinierte Eigenschaften. Für das Backend habe ich auch eine *REST API*
-mit *OpenAPI* erstellt. [fastify](https://www.fastify.io/) war meine Wahl für
-das Framework.
-
-**Meine Aufgaben:** Full-Stack-Entwicklung, Projektmanagement,
-Software-Architektur, Kundenbetreuung.
-
-| Technik Highlights                 |                                              |
-|------------------------------------|----------------------------------------------|
-| [Vue.JS][vue.js]                   | Mobile App mit der Vuetify Component Library |
-| [fastify][fastify]                 | Backend-Framework für NodeJS                 |
-| [jspdf][jspdf]                     | als Pipeline-Tool für CI/CD                  |
-| [OpenAPI][openapi]                 | REST-API-Generierung und Dokumentation       |
-| [Heroku][heroku]                   | Deployment pipeline für eine REST API        |
-
-| Links                              |                                                                  |
-|------------------------------------|------------------------------------------------------------------|
-| App                                | <https://kita-tagesplaner.onrender.com>                          |
-| Repository der App                 | <https://github.com/NULLzuEINS/kindergarten-day-planner-app>     |
-| Repositorie des Service            | <https://github.com/NULLzuEINS/kindergarten-day-planner-service> |
-
 
 ## Projektleitung
 
@@ -141,30 +95,6 @@ Terminbuchungen …)
 | Demo  | <https://nr:reiseberater@reiseberater2go.herokuapp.com> |
 
 
-
-### [[↑](#projektübersicht)] dynamo-dresden.de
-
-_2014 - 2015_
-
-![Dynamo Dresden Website](Media/Portfolio/dynamo-dresden.png)
-
-Als technischer Leiter war ich für die Planung verantwortlich. Ich war ein Teil
-des Pitches. Des Weiteren war ich verantwortlich für Lasttests und
-Leistungsverbesserungen.
-
-| Technologische Highlights                |                         |
-|------------------------------------------|-------------------------|
-| [Varnish][varnish]                       | Reverse Proxy           |
-| [Edge Side Includes][edge-side-includes] | Edge Side Includes      |
-| [Load Testing][jmeter]                   | Load Testing mit jMeter |
-| [TYPO3][typo3]                           | TYPO3 CMS               |
-
-| Links                                                     |                                                              |
-|:----------------------------------------------------------|--------------------------------------------------------------|
-| Website                                                   | <https://www.dynamo-dresden.de>                              |
-| Chrome Extensions Dynamo                                  | <https://chrome.google.com/webstore/search/dynamo%20dresden> |
-
-
 ## Software Development
 
 ### [[↑](#projektübersicht)] EDEKA POS Integration
@@ -176,7 +106,7 @@ EDEKA Infrastruktur und beauftragte Thinkport als technischen Dienstleister.
 
 Die **Technologie-Highlights** sind **Flutter** für die App-Entwicklung,
 **Java** für die Backend-Entwicklung und **Docker** für die Bereitstellung der
-Anwendung. **OpenTelemtetry** wird für die Observability eingesetzt.
+Anwendung. **OpenTelemetry** wird für die Observability eingesetzt.
 
 | Technologische Highlights      |                              |
 |--------------------------------|------------------------------|
@@ -266,25 +196,6 @@ Richtlinien/Anforderungen des *Google Play Store* gelernt.
 | Repository        | <https://github.com/vergissberlin/tap-tap->                              |
 | Google Play Store | <https://play.google.com/store/apps/details?id=com.vergissberlin.taptap> |
 
-### [[↑](#projektübersicht)] Bashlight
-
-![Bashlight](Media/Portfolio/bashlight.png)
-
-Eine Erweiterung der Kommandozeilen-Eingabeaufforderung, die unter anderem den
-Git-Zweig und den Git-Status anzeigt. In der Zwischenzeit gibt es Andere,
-bessere OpenSource-Projekte zu diesem Thema. Aus diesem Grund habe ich das
-Projekt archiviert.
-
-| Technologische Highlights |                                    |
-|---------------------------|------------------------------------|
-| [bash scripting][bash]    | Prompt, Git, Testing,  Auto update |
-
-| Links         |                                              |
-|---------------|----------------------------------------------|
-| Dokumentation | <http://vergissberlin.github.io/bashlight/>  |
-| Repository    | <https://github.com/vergissberlin/bashlight> |
-
-
 ### [[↑](#projektübersicht)] CoffeeBin
 
 _2020_
@@ -302,56 +213,18 @@ hauptsächlich in meiner Freizeit.
 
 **Technologische Highlights** neben der Entwicklung in C++ zur Erfassung der
 Daten, kam hier Node-RED zur Steuerung und verarbeitung der Datenströme zum
-Einsatz. Die Speicherung erfolgt in der zeitbasierenden Datenbank InfluxDB und
-die Visualiserung mit Grafana.
+Einsatz. Die Speicherung erfolgt in der Zeit basierenden Datenbank 
+von InfluxDB und die Visualisierung mit Grafana.
 
-![Camp Fight Prototyp](Media/Portfolio/coffee-bin.png)
+![CoffeeBin](Media/Portfolio/coffee-bin.png)
 
 | Technologische Highlights         |                                                                                                      |
 |-----------------------------------|------------------------------------------------------------------------------------------------------|
 | [Tasmota][tasmota]                | C++ zur Erfassung der Daten                                                                          |
 | [NodeRED][node-red]               | zur Steuerung von Events und versenden von Nachrichten an Twitter und den Firmeninternen Slack-Chat. |
-| [InfluxDB][influxdb]              | zeitbasierende Speicherung der Daten                                                                 |
+| [InfluxDB][influxdb]              | Zeit basierende Speicherung der Daten                                                                |
 | [Grafana][grafana]                | zur Visualisierung der Daten                                                                         |
 
-### [[↑](#projektübersicht)] CamFight
-
-_2017_
-
-![Camp Fight Prototyp](Media/Portfolio/cam-fight.png)
-
-WebApp erstellt für ein Team-Event. Es handelt sich um eine digitalisierte Form
-einer [Fotorallye](http://www.games-wiki.org/wiki/Photo_rally/). Die
-Teilnehmer werden nach dem Zufallsprinzip einem Team zugewiesen und müssen
-innerhalb einer bestimmten Zeit Aufgaben lösen. Das Ergebnis jeder Aufgabe ist
-immer ein Foto, das dann am Ende zum Sieger gekürt werden kann. Entstanden als
-F&E-Projekt innerhalb einer Woche.
-
-Das Besondere dabei war, dass wir zu zweit nur 4 Tage Zeit hatten, um die App
-zu realisieren. **Rapid Prototyping** mit Papierprototypen und Figma direkt mit
-dem Kunden. **Meine Aufgaben waren** die Erstellung der App, des Frontends, das
-Projektmanagement, die Softwarearchitektur und der Kundensupport.
-
-**Technologische Highlights** waren Vue.js im Frontend mit Vuetify als
-Komponentenbibliothek, surge.sh statischer Dateiserver mit TravisCI Deployment-
-Automatisierung und REST API mit PHP-Backend und PostMan als Dokumentationstool
-und Amazon S3 für Benutzer-Uploads. Die App war auf mobilen Geräten
-installierbar. Derzeit gibt es keine aktive Herausforderung.
-
-| Technologische Highlights        |                                                   |
-|----------------------------------|---------------------------------------------------|
-| [Heroku][heroku]                 | Deployment der REST API                           |
-| [Vue.JS][vue.js]                 | Mobile App mit der Vuetify Komponenten-Bibliothek |
-| [Vuetify][vuetify]               | Komponenten-Bibliothek für vue.JS                 |
-| [AWS S3][aws-s3]                 | Zum Upload der Fotos durch die Nutzer             |
-| [Travis CI][travis-ci]           | als Pipeline tool für CI/CD                       |
-| [Postman][postman]               | API Dokumentation                                 |
-
-| Links                            |                                              |
-|----------------------------------|----------------------------------------------|
-| App                              | <https://cam-fight.surge.sh>                 |
-| Repository                       | <https://github.com/vergissberlin/cam-fight> |
-| Prototype                        | <https://marvelapp.com/prototype/ahg35jj>    |
 
 ### [[↑](#projektübersicht)] Digitaler Agenturkicker
 
@@ -377,7 +250,7 @@ Hardware.
 | [Python][python]                                          | zum Ansprechen von Hardware-Komponenten                                                                                                                            |
 | [Google Firebase][google-firebase]                        | zur Authentifizierung und Nutzung der Echtzeit-Datenbank                                                                                                           |
 | [Google Chrome Extension][google-chrome-extension-piball] | zur Anzeige der Ergebnisse direkt im Browser und zum Auslösen von Notifications. Verfügbar im [Chrome Web Store][google-chrome-extension-piball].                  |
-| [Ionic Framework][ionic-framework]                        | zur Erstellung einer Native App fpr iOS und Androidm                                                                                                               |
+| [Ionic Framework][ionic-framework]                        | zur Erstellung einer Native App fpr iOS und Android                                                                                                                |
 | [Belana.io][belana.io]                                    | zum Flottenmanagement der dockerisierten Anwendung und Node-RED zum Steuern von Events und versenden von Nachrichten an Twitter und den Firmeninternen Slack-Chat. |
 | [NodeRED][node-red]                                       | zur Steuerung von Events und versenden von Nachrichten an Twitter und den Firmeninternen Slack-Chat.                                                               |
 
@@ -390,7 +263,7 @@ Hardware.
 | Web interface                                             | <https://vivid-fire-2266.web.app>                    |
 
 
-### [[↑](#projektübersicht)] Blugento
+### [[↑](#projektübersicht)] Produktentwicklung Blugento
 
 _2017 - 2018_
 
@@ -475,87 +348,54 @@ Software.
 
 
 [apollojs]: https://www.apollographql.com/
-
 [autopilot]: https://www.autopilot.io/
-
-[aws-ecs]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_Basics.html
-
 [aws-ec2]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-types.html
-
+[aws-ecs]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_Basics.html
 [aws-efs]: https://docs.aws.amazon.com/efs/latest/ug/
-
 [aws-rds]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html
-
 [aws-s3]: https://aws.amazon.com/s3/
-
 [bash]: https://www.gnu.org/software/bash/
-
 [belana.io]: https://belana.io/
-
+[canva]: https://www.canva.com/
+[ci-cd]: https://en.wikipedia.org/wiki/CI/CD
 [concourse-ci]: https://docs.concourse.ci/
-
-[docker]: https://www.docker.com/
-
+[datadog]: https://www.datadoghq.com/
 [docker-compose]: https://docs.docker.com/compose/
-
 [docker-registry]: https://docs.docker.com/registry/
-
+[docker]: https://www.docker.com/
 [edge-side-includes]: https://en.wikipedia.org/wiki/Edge_Side_Includes
-
 [expo]: https://expo.dev/
-
 [fastify]: https://www.fastify.io/
-
-[google-chrome-extension]: https://chrome.google.com/webstore/detail/google-chrome-extension-for-t/nmmhkkegccagdldgiimedpiccmgmiednk
-
+[flutter]: https://flutter.dev/
 [google-chrome-extension-dynamo]: https://chrome.google.com/webstore/search/dynamo
-
+[google-chrome-extension]: https://chrome.google.com/webstore/detail/google-chrome-extension-for-t/nmmhkkegccagdldgiimedpiccmgmiednk
 [google-firebase]: https://firebase.google.com/
-
 [google-play-store]: https://play.google.com/store/apps/details?id=com.example.taptap
-
-[graphql]: https://graphql.org/
-
 [grafana]: https://grafana.com/
-
+[graphql]: https://graphql.org/
 [heroku]: https://dashboard.heroku.com/apps/camfight-app
-
 [hubspot]: https://www.hubspot.com/
-
-[kubernetes]: https://kubernetes.io/
-
 [influxdb]: https://influxdb.com/
-
 [ionic-framework]: https://ionicframework.com/
-
+[jaeger]: https://www.jaegertracing.io/
+[javascript]: https://www.javascript.com/
+[java]: https://www.java.com/
 [jmeter]: https://jmeter.apache.org/
-
 [jspdf]: https://parall.ax/products/jspdf
-
+[kubernetes]: https://kubernetes.io/
 [netresearch]: https://www.netresearch.de/
-
 [node-red]: https://nodered.org/
-
 [openapi]: https://swagger.io/specification/
-
+[opentelemetry]: https://opentelemetry.io/
 [postman]: https://www.getpostman.com/
-
+[prometheus]: https://prometheus.io/
 [python]: https://www.python.org/
-
 [react-native]: https://reactnative.dev/
-
 [sphinx]: https://www.sphinx-doc.org/
-
 [tasmota]: https://tasmota.github.io/docs/
-
 [travis-ci]: https://travis-ci.org/
-
 [typo3]: https://typo3.org/
-
 [umg]: https://www.universalmusic.com/
-
-[vue.js]: https://vuejs.org/
-
 [varnish]: https://www.varnish-cache.org/
-
+[vue.js]: https://vuejs.org/
 [vuetify]: https://vuetifyjs.com/

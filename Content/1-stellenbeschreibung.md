@@ -1,6 +1,6 @@
 # Stellenbeschreibung 
 
-## Chief of Innovation and Network Officer (CINO) 
+## Chief of Innovation and Network Officer (CINO) + 
 
 > Ich gestalte Innovation. Ich baue Netzwerke. Ich bringe Zukunft ins Unternehmen.
 
@@ -34,6 +34,13 @@ Ich arbeite eng mit Führungskräften und Teams aus allen Bereichen zusammen. Ic
 verstehe mich als Schnittstelle zwischen Strategie und Umsetzung. Durch offene 
 Kommunikation und mutige Experimente fördere ich eine Kultur der Innovation – 
 geprägt von Vertrauen, Lernen und Verantwortung.
+
+### Erprobung und Skalierung neuer Geschäftsmodelle
+
+Durch meinen technischen Background und meine Erfahrung im Innovationsmanagement
+kann ich neue Geschäftsmodelle schnell erproben und skalieren.
+
+![cino plus](Media/Cino/cino-aufgaben.light.svg)
 
 ⸻
 

@@ -1,6 +1,6 @@
 # Portfolio
 
-## Projektübersicht
+## Portfolio – Projektübersicht
 
 ### Projektleitung und Produktentwicklung
 
@@ -10,11 +10,11 @@
 
 ### Software  Development
 
-- [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics (IoT)
-- [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel
-- [EDEKA - Kassensoftware Integration](#-edeka-pos-integration) Integration der Gebit Kassenlösung für Edeka (Windows App)
-- [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development (iOS & Android) 
-- [Tap!Tap!](#-tap-tap) App development (iOS)
+- [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics _(IoT)_
+- [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel _(IoT)_
+- [EDEKA - Kassensoftware Integration](#-edeka-pos-integration) Integration der Gebit Kassenlösung für Edeka _(Windows App)_
+- [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development _(iOS & Android)_
+- [Tap!Tap!](#-tap-tap) App development _(iOS)_
 
 ### Consulting, Schulungen und DevOps
 
@@ -23,7 +23,7 @@
 
 ---
 
-## Projektdetails
+## Portfolio – Projektdetails
 
 ### [[↑](#projektübersicht)] Observability EDEKA PoC
 

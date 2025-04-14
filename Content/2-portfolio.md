@@ -2,35 +2,33 @@
 
 ## Projektübersicht
 
-- **POS & Observability**
-    - [EDEKA - Observability PoC](#-edeka-obbservability-Poc)
-      Integration der Gebit Kassenlösung für Edeka
-    - [EDEKA - Kassensoftware Integration](#-edeka-pos-integration)
-      Integration der Gebit Kassenlösung für Edeka
+### Projektleitung und Produktentwicklung
 
-- **IoT**
-    - [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics
-    - [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel
+- [EDEKA - Observability PoC](#-edeka-obbservability-Poc)    Integration der Gebit Kassenlösung für Edeka
+- [Blugento Produktentwicklung](#-produktentwicklung-blugento) Docker, Marketing Automation, AWS
+- [AIDA board portal](#-AIDA-board-portal) Gästeportal für AIDA Cruises
 
-- **App development**
-    - [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
-    - [Tap!Tap!](#-tap-tap) App development
+### Software  Development
 
-- **Web development**
-    - [AIDA board portal](#-AIDA-board-portal) Gästeportal für AIDA Cruises
-    - [Blugento](#-produktentwicklung-blugento) Docker, Marketing Automation,
-      AWS
+#### IoT
 
-- **CI CD**
-    - [Universal Music - Shop-Manager](#-universal-music--shop-manager) 
-      Schulungen, Docker, CI CD, Cloud (AWS, Azure)
-    - [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
+- [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics
+- [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel
+
+#### App development
+
+- [EDEKA - Kassensoftware Integration](#-edeka-pos-integration) Integration der Gebit Kassenlösung für Edeka
+- [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
+- [Tap!Tap!](#-tap-tap) App development
+
+#### Consulting, Schulungen und DevOps
+
+- [Universal Music - Shop-Manager](#-universal-music--shop-manager) 
+  Schulungen, Docker, CI CD, Cloud (AWS, Azure)
 
 ---
 
-## Consulting
-
-## Projektleitung
+## Projektdetails
 
 ### [[↑](#projektübersicht)] Observability EDEKA PoC
 
@@ -94,8 +92,6 @@ Terminbuchungen …)
 |-------|---------------------------------------------------------|
 | Demo  | <https://nr:reiseberater@reiseberater2go.herokuapp.com> |
 
-
-## Software Development
 
 ### [[↑](#projektübersicht)] EDEKA POS Integration
 
@@ -299,8 +295,6 @@ hochgefahren werden, aber auch Systeme für den Live-Betrieb verwalten.
 | App                                                       | <https://app.blugento.com> |
 
 
-## DevOps
-
 ### [[↑](#projektübersicht)] Universal Music – Shop Manager
 
 _2018-2019_
@@ -335,16 +329,6 @@ Software.
 | Links                              |                                  |
 |------------------------------------|----------------------------------|
 | Universal Music Group              | <https://www.universalmusic.com> |
-
-
-## [[↑](#projektübersicht)] Weitere Projekte
-
-… auf die ich stolz bin.
-
-| Projekt                                                                          |                                                    |
-|:---------------------------------------------------------------------------------|:---------------------------------------------------|
-| [Node-RED mjml ↗](https://flows.nodered.org/node/@example/node-red-contrib-mjml) | Node-RED node zur Gestaltung von E-Mail templates  |
-| [Node-RED say ↗](https://flows.nodered.org/node/@example/node-red-contrib-say)   | Node-RED node zur Ausgabe von Sprachnachrichten    |
 
 
 [apollojs]: https://www.apollographql.com/

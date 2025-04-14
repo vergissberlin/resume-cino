@@ -4,7 +4,7 @@
 
 | Zeitraum                  | Position                           | Unternehmen                                                                                                                                                                                                                                                                                                                         |
 |:--------------------------|------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **2025**/02 → `now()`     | Geschäftsführer                    | [kieks.me GbR][nullzueins] <br>Hinter der kieks.me GbR verbirgt sich ein Zusammenschluss von Thomas Schöne und André Lademann. Wir realisieren nebenberuflich Webseiten und Webservices für Kleiune und mittelständische Unternehmen.                                                                                               |
+| **2025**/02 → `now()`     | Geschäftsführer                    | [kieks.me GbR][kieksme] <br>Hinter der kieks.me GbR verbirgt sich ein Zusammenschluss von Thomas Schöne und André Lademann. Wir realisieren nebenberuflich Webseiten und Webservices für Kleiune und mittelständische Unternehmen.                                                                                                  |
 | **2007**/03 → `now()`     | Freelancer                         | [NULLzuEINS Inh. André Lademann][nullzueins] <br>Hinter NULLzuEINS verbirgt sich ein Einzelunternehmen. Ich arbeite nebenberuflich im Bereich Web-Development. **Technologien:** Vue.js,TYPO3, OpenAPI, CMS-SaaS                                                                                                                    |
 | **2023**/03 → `now()`     | Senior Cloud Engineer              | [Thinkport GmbH][thinkport] <br>**Technologien:** Azure, Ansible, Terraform, Dart & Flutter, Java, OpenTelemetry, **Themen** Observability, Cloud Engineering, Software Architect, Software Development, POS                                                                                                                        |
 | **2018**/10 → **2023**/03 | Senior Fullstack Software Engineer | [Netresearch DTT GmbH][netresearch-dtt-gmbh] <br>**Aufgaben:** Ich arbeite als Senior Softwareentwickler bei Netresearch DTT GmbH. Hier arbeite ich mit dem Entwicklungsprozess von Netresearch und der Integration von Netresearch in die Produktentwicklung.                                                                      |
@@ -164,6 +164,8 @@ Zu erreichen bin ich unter folgenden Kontaktdaten:
 [jmeter]: https://jmeter.apache.org/
 
 [jspdf]: https://parall.ax/products/jspdf
+
+[kieksme]: https://kieks.shop
 
 [kubernetes]: https://kubernetes.io/
 

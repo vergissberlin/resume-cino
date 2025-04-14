@@ -189,7 +189,7 @@ Richtlinien/Anforderungen des *Google Play Store* gelernt.
 
 _2020_
 
-![img.png](Media/Portfolio/coffee-bin-nodered.png)
+![CoffeeBin NodeRED](Media/Portfolio/coffee-bin-nodered.png)
 
 Big-Data-Applikation zur Erfassung von Kaffee-Trink-Daten bei
 [Netresearch DTT GmbH][netresearch]. Die Daten werden in einer zeitbasierten

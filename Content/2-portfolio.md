@@ -10,18 +10,13 @@
 
 ### Software  Development
 
-#### IoT
+- IoT - [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics
+- IoT - [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel
+- App - [EDEKA - Kassensoftware Integration](#-edeka-pos-integration) Integration der Gebit Kassenlösung für Edeka
+- App - [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
+- App - [Tap!Tap!](#-tap-tap) App development
 
-- [CoffeeBin](#-coffeebin) Datenvisualisierung und Analytics
-- [Digitaler Agenturkicker](#-Digitaler-Agenturkicker) IoT Multichannel
-
-#### App development
-
-- [EDEKA - Kassensoftware Integration](#-edeka-pos-integration) Integration der Gebit Kassenlösung für Edeka
-- [Flughafen Leipzig/Halle Nachbarschaftsportal](#-lej-nachbarn-app) App development
-- [Tap!Tap!](#-tap-tap) App development
-
-#### Consulting, Schulungen und DevOps
+### Consulting, Schulungen und DevOps
 
 - [Universal Music - Shop-Manager](#-universal-music--shop-manager) 
   Schulungen, Docker, CI CD, Cloud (AWS, Azure)

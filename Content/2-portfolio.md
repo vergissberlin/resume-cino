@@ -51,8 +51,6 @@ in [DataDog][datadog].
 | [Prometheus][prometheus]           | Monitoring     |
 | [DataDog][datadog]                 | Observability  |
 
-| Links |
-
 
 ### [[↑](#projektübersicht)] AIDA board portal
 

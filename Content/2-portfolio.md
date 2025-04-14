@@ -1,6 +1,6 @@
 # Portfolio
 
-## Portfolio – Projektübersicht
+## Projektübersicht
 
 ### Projektleitung und Produktentwicklung
 
@@ -23,7 +23,7 @@
 
 ---
 
-## Portfolio – Projektdetails
+## Projektdetails
 
 ### [[↑](#projektübersicht)] Observability EDEKA PoC
 

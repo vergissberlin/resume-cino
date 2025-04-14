@@ -17,7 +17,7 @@ variables:
   titlepage-rule-height: 1
   titlepage-background: 'Content/Media/Cover/CINO-Cover.pdf'
   page-background: 'Content/Media/Cover/CINO-Body.pdf'
-  fontsize: 12pt
+  fontsize: 10pt
   logo-width: 64mm
   book: false
   toc-own-page: true

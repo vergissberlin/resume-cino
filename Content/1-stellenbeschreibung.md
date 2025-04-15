@@ -63,6 +63,15 @@ kann ich Marketing- und Vertriebsprozesse effizienter gestalten.
 
 ![Effiziente Prozesse durch Automatisierung](Media/Cino/cino-automation-feedback.light.svg)
 
+### Wissensmanagement
+
+Durch Standarisierung und Automatisierung von Prozessen kann ich Wissen 
+schneller und effizienter bereitstellen. Gilden und RFCs sind ein
+Werkzeug, um Wissen zu teilen und zu verbreiten und Innovationen zu fördern.
+
+![Wissensmanagement intern und im Cluster](Media/Cino/cino-wissensmanagement.light.svg)
+
+
 ⸻
 
 ## Wofür ich stehe

@@ -61,7 +61,7 @@ kann ich neue Geschäftsmodelle schnell erproben.
 Durch meine Erfahrung im Marketing und in der Automatisierung von Prozessen
 kann ich Marketing- und Vertriebsprozesse effizienter gestalten.
 
-![Effiziente Prozesse durch Automatisierung](Media/Cino/cino-automation-feedback.light.png)
+![Effiziente Prozesse durch Automatisierung](Media/Cino/cino-automation-feedback.light.svg)
 
 ⸻
 

@@ -71,7 +71,6 @@ Werkzeug, um Wissen zu teilen und zu verbreiten und Innovationen zu fördern.
 
 ![Wissensmanagement intern und im Cluster](Media/Cino/cino-wissensmanagement.light.svg)
 
-
 ⸻
 
 ## Wofür ich stehe
@@ -79,4 +78,3 @@ Werkzeug, um Wissen zu teilen und zu verbreiten und Innovationen zu fördern.
 1. Ich glaube daran, dass Innovation kein Zufall ist – sondern das Ergebnis von Neugier, Offenheit und Zusammenarbeit.
 2. Ich bringe Struktur ins Neue, ohne es zu ersticken.
 3. Ich vernetze Menschen, Ideen und Technologien zu etwas Größerem.
-

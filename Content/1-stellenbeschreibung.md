@@ -2,8 +2,6 @@
 
 ## Chief Innovation and Network Officer (CINO) 
 
-
-
 > Ich gestalte Innovation. Ich baue Netzwerke. Ich bringe Zukunft ins Unternehmen.
 
 In meiner Rolle als Chief Innovation and Network Officer verantworte ich die 
@@ -25,10 +23,10 @@ agile Methoden und interdisziplinäre Teams.
 
 ### Netzwerke aufbauen und nutzen
 
-Ich knüpfe und pflege Beziehungen zu Start-ups, Hochschulen, Innovationsclustern 
-und strategischen Partnern. Ich repräsentiere das Unternehmen auf Konferenzen, 
-Messen und Events – immer auf der Suche nach Impulsen, Kooperationen und 
-gemeinsamen Zukunftsprojekten.
+Ich knüpfe und pflege Beziehungen zu Start-ups, Hochschulen, unseren 
+Partnern im CLuster und strategischen Partnern. Ich repräsentiere das 
+Unternehmen auf Konferenzen, Messen und Events – immer auf der Suche nach 
+Impulsen, Kooperationen und gemeinsamen Zukunftsprojekten.
 
 ### Zusammenarbeit ermöglichen
 
@@ -65,7 +63,6 @@ kann ich Marketing- und Vertriebsprozesse effizienter gestalten.
 
 ![Effiziente Prozesse durch Automatisierung](Media/Cino/cino-automation-feedback.light.svg)
 
-
 ⸻
 
 ## Wofür ich stehe
@@ -73,3 +70,4 @@ kann ich Marketing- und Vertriebsprozesse effizienter gestalten.
 1. Ich glaube daran, dass Innovation kein Zufall ist – sondern das Ergebnis von Neugier, Offenheit und Zusammenarbeit.
 2. Ich bringe Struktur ins Neue, ohne es zu ersticken.
 3. Ich vernetze Menschen, Ideen und Technologien zu etwas Größerem.
+

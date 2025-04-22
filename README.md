@@ -5,5 +5,5 @@
 [![Resume - Download](https://img.shields.io/badge/Resume-Download-2ea44f?style=for-the-badge)](https://github.com/vergissberlin/resume-cino/releases)
 
 
-![CINO+](Media/Cino/cino-aufgaben.light.svg)
+![CINO+](Content/Media/Cino/cino-aufgaben.light.svg)
 

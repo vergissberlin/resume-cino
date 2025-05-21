@@ -81,7 +81,7 @@ jobs:
 
             | PDF | EPUB |
             | --- | ---- |
-            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/${{ env.RESUME_FILENAME }}.epub) |
+            | [![Badge PDF](https://img.shields.io/badge/PDF-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/andre-lademann_${{ github.ref_name }}.pdf) | [![Badge Epub](https://img.shields.io/badge/EPUB-resume-100000?style=for-the-badge&labelColor=4E4796&color=DBD7FF)](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/andre-lademann_${{ github.ref_name }}.epub) |
 
       - name: Upload PDF Release Asset
         uses: actions/upload-release-asset@v1
@@ -90,7 +90,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./Results/${{ env.RESUME_FILENAME }}.pdf
-          asset_name: ${{ env.RESUME_FILENAME }}.pdf
+          asset_name: andre-lademann_${{ github.ref_name }}.pdf
           asset_content_type: application/pdf
 
       - name: Upload EPUB Release Asset
@@ -100,5 +100,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./Results/${{ env.RESUME_FILENAME }}.epub
-          asset_name: ${{ env.RESUME_FILENAME }}.epub
+          asset_name: andre-lademann_${{ github.ref_name }}.epub
           asset_content_type: application/epub+zip

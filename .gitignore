@@ -1,5 +1,6 @@
 .vscode
 .idea
 .DS_Store
+.obsidian/workspace.json
 Temp
 Results

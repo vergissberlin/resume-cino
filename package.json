@@ -1,0 +1,24 @@
+{
+  "name": "resume-cino",
+  "version": "1.0.0",
+  "description": "Chief Innovation and Network Officer (CINO) Resume",
+  "author": "André Lademann <vergissberlin@gmail.com>",
+  "license": "CC-BY-NC-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vergissberlin/resume-cino.git"
+  },
+  "homepage": "https://github.com/vergissberlin/resume-cino",
+  "keywords": [
+    "resume",
+    "cv",
+    "cino",
+    "pandoc",
+    "pdf",
+    "epub"
+  ],
+  "scripts": {
+    "build:pdf": "./Scripts/build.sh pdf",
+    "build:epub": "./Scripts/build.sh epub"
+  }
+}

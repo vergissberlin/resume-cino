@@ -1,14 +1,14 @@
-name: Build resume and publish it on GitHub releases
+name: Build resume and publish it on GitHub releases (Legacy)
 
 permissions:
   contents: write
   packages: write
 
 on:
+  workflow_dispatch:
   push:
     tags:
-      - '*'
-  workflow_dispatch:
+      - 'manual-*'  # Only trigger for manual tags starting with "manual-"
 
 jobs:
   build:

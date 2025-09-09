@@ -1,0 +1,63 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+          package-name: resume-cino
+
+      # The logic below will be executed when a release is created
+      - name: Checkout
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v4
+
+      - name: Read dotenv vars
+        if: ${{ steps.release.outputs.release_created }}
+        uses: xom9ikk/dotenv@v2
+
+      - name: Create folders
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          mkdir -p Results
+          mkdir -p Temp
+
+      - name: Build resume in PDF format using Docker
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          ./Scripts/build.sh pdf
+
+      - name: Build resume in EPUB format using Docker
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          ./Scripts/build.sh epub
+
+      - name: Upload PDF Release Asset
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} \
+            ./Results/${{ env.RESUME_FILENAME }}.pdf \
+            --clobber
+
+      - name: Upload EPUB Release Asset
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} \
+            ./Results/${{ env.RESUME_FILENAME }}.epub \
+            --clobber

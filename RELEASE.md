@@ -3,73 +3,118 @@
 ## Overview
 This document describes the release process for the Resume project. Each release contains a PDF and EPUB version of the resume.
 
-## Release Process
+**New**: This project now uses [release-please](https://github.com/googleapis/release-please) for automated version management and changelog generation.
 
-### 1. Preparation
-- Ensure all changes are committed
-- Update the version number in the Git tag
-- Review changes in the changelog
+## Automated Release Process with release-please
 
-### 2. Release Creation
-1. Create a new Git tag:
+### How it works
+1. **Conventional Commits**: Use [conventional commit](https://www.conventionalcommits.org/) messages for your changes
+2. **Automatic PR Creation**: release-please automatically creates release PRs based on your commit messages
+3. **Automated Versioning**: Versions are bumped automatically based on commit types
+4. **Changelog Generation**: CHANGELOG.md is automatically updated
+5. **Automated Builds**: PDF and EPUB files are built and attached to releases automatically
+
+### Commit Message Format
+Use conventional commit messages to trigger appropriate version bumps:
+
+- `feat:` - New feature (minor version bump)
+- `fix:` - Bug fix (patch version bump)  
+- `docs:` - Documentation changes (patch version bump)
+- `style:` - Formatting changes (patch version bump)
+- `refactor:` - Code refactoring (patch version bump)
+- `chore:` - Maintenance tasks (patch version bump)
+
+For breaking changes, add `!` after the type: `feat!:` (major version bump)
+
+### Example Workflow
+1. Make changes to your resume content
+2. Commit with conventional message: `feat: add new certification section`
+3. Push to main branch
+4. release-please creates a release PR automatically
+5. Review and merge the release PR
+6. release-please creates a GitHub release with PDF and EPUB attachments
+
+## Manual Release Process (Legacy)
+
+### For emergencies or special cases only
+1. Create a Git tag starting with "manual-": 
    ```bash
-   git tag X.X.X
-   git push origin X.X.X
+   git tag manual-X.X.X
+   git push origin manual-X.X.X
    ```
-2. The GitHub Action workflow will be triggered automatically
-3. PDF and EPUB files will be created
-4. A new release will be created on GitHub
+2. The legacy workflow will trigger and create a manual release
 
-### 3. Release Assets
-- PDF file: `andre-lademann_X.X.X.pdf`
-- EPUB file: `andre-lademann_X.X.X.epub`
+## Release Assets
+Each release includes:
+- PDF file: `cino-andrelademann.pdf`
+- EPUB file: `cino-andrelademann.epub`
+- Automated changelog with all changes since last release
 
-### 4. Release Notes
-Each release contains:
-- A list of changes
-- Download links for PDF and EPUB
-- Badges for different formats
+## Version History & Changelog
 
-## Version History
-
-### Versioning
-- Major Version (X.0.0): Major changes
-- Minor Version (0.X.0): New features
-- Patch Version (0.0.X): Bug fixes
+### Versioning (Semantic Versioning)
+- **Major Version (X.0.0)**: Breaking changes or major content restructuring
+- **Minor Version (0.X.0)**: New features, sections, or significant additions
+- **Patch Version (0.0.X)**: Bug fixes, typos, minor improvements
 
 ### Changelog
-Each release should include a changelog documenting the most important changes:
+The CHANGELOG.md file is automatically maintained by release-please and includes:
 - New features
-- Bug fixes
+- Bug fixes  
 - Breaking changes
 - Improvements
+- Links to commits and PRs
 
 ## Usage
 
-### PDF Download
+### Download Latest Release
 1. Go to [GitHub Releases](https://github.com/vergissberlin/resume-cino/releases)
-2. Select the desired version
-3. Click on the PDF download link
+2. Click on the latest release
+3. Download the PDF or EPUB file
 
-### EPUB Download
+### Download Specific Version
 1. Go to [GitHub Releases](https://github.com/vergissberlin/resume-cino/releases)
-2. Select the desired version
-3. Click on the EPUB download link
+2. Find the desired version
+3. Download the PDF or EPUB file
 
 ## Troubleshooting
 
 ### Common Issues
-1. **Release not created**
-   - Check GitHub Actions
-   - Ensure the Git tag is correct
+1. **Release PR not created**
+   - Ensure you're using conventional commit messages
+   - Check that commits are pushed to the main branch
+   - Verify the release-please workflow is enabled
 
-2. **Missing assets**
-   - Check build logs
-   - Ensure files are generated correctly
+2. **Release build failed**
+   - Check GitHub Actions logs
+   - Ensure Docker and build dependencies are available
+   - Verify the build scripts are executable
 
-3. **Incorrect version number**
-   - Check Git tag
-   - Ensure version number is correct
+3. **Missing assets in release**
+   - Check that the build completed successfully
+   - Verify PDF and EPUB files were generated
+   - Check upload permissions and GitHub token
+
+### Force a Release
+If you need to force a release without waiting for conventional commits:
+1. Manually edit the version in package.json
+2. Update CHANGELOG.md with your changes
+3. Commit with message: `chore(release): manually trigger release`
+
+## Migration from Manual Process
+
+### What Changed
+- ✅ Automated version bumping based on conventional commits
+- ✅ Automated changelog generation
+- ✅ Automated release PR creation
+- ✅ Maintained existing build process and asset naming
+- ✅ Legacy manual process still available for emergencies
+
+### What Stays the Same
+- Same PDF and EPUB build process
+- Same file naming convention
+- Same GitHub releases location
+- Same Docker-based building
 
 ## Support
 For issues or questions:
